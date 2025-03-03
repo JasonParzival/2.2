@@ -10,26 +10,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container p-2 d-flex" style="display:flex; justify-content: center; gap: 30px">
-        <button type="button" class="btn btn-primary" onclick="first(this)">Я синяя кнопочка</button>
-        <button type="button" class="btn btn-info" onclick="first(this)">Я бирюзовая кнопочка</button>
-        <button type="button" class="btn btn-warning" onclick="first(this)">Я желтая кнопочка</button>
+    <div class="container">
+      <div class="row justify-content-center mt-2">
+        <div class="col-auto">
+          <div class="btn btn-info" onclick="onButtonClick(this)">Красный</div>
+          <div class="btn btn-info" onclick="onButtonClick(this)">Оранжевый</div>
+          <div class="btn btn-info" onclick="onButtonClick(this)">Желтый</div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-auto">
+          <div class="border shadow" style="width: 200px;height:200px;"></div>
+        </div>
+      </div>
     </div>
-      
-    <div class="container p-2 d-flex" style="display:flex; justify-content: center; gap: 30px">
-        <button type="button" class="btn btn-outline-secondary" onclick="second(this)">Я серая кнопочка</button>
-        <button type="button" class="btn btn-outline-danger" onclick="second(this)">Я опасная кнопочка</button>
-    </div>
-
+    
     <script>
-      function first (button) {
-        console.log(button.innerText)
-      }
-    </script> 
-
-    <script>
-      function second (button) {
-        console.log(button.classList)
+      function onButtonClick (target) {
+          console.log(target.innerText)
       }
     </script>
 
