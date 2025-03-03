@@ -13,23 +13,37 @@
     <div class="container">
       <div class="row justify-content-center mt-2">
         <div class="col-auto">
-          <div class="btn btn-info" onclick="onButtonClick(this)">Красный</div>
-          <div class="btn btn-info" onclick="onButtonClick(this)">Оранжевый</div>
-          <div class="btn btn-info" onclick="onButtonClick(this)">Желтый</div>
+          <div class="btn btn-info" onclick="onButtonClick(this)" style="background-color: #ff003c;">Красный</div>
+          <div class="btn btn-info" onclick="onButtonClick(this)" style="background-color: #ff9500;">Оранжевый</div>
+          <div class="btn btn-info" onclick="onButtonClick(this)" style="background-color: #ffd500;">Желтый</div>
         </div>
       </div>
       <div class="row justify-content-center mt-2">
         <div class="col-auto">
-          <div class="border shadow" style="width: 200px;height:200px;"></div>
+          <div id="kvadrat" class="border shadow d-flex align-items-center justify-content-center" style="width: 200px;height:200px;"></div>
         </div>
       </div>
     </div>
     
     <script>
       function onButtonClick (target) {
-          console.log(target.innerText)
+          let kvadrat = document.getElementById("kvadrat");
+    
+          if (target.innerText == "Красный") {
+            kvadrat.style.backgroundColor = "#ff003c";
+          } else if (target.innerText == "Оранжевый") {
+            kvadrat.style.backgroundColor = "#ff9500";
+          } else if (target.innerText == "Желтый") {
+            kvadrat.style.backgroundColor = "#ffd500";
+          }
       }
     </script>
+
+    <style>
+      #kvadrat {  
+        transition: all .3s;
+      }
+    </style>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
